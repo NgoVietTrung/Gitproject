@@ -7,7 +7,14 @@
     <title>Hiển thị đầu ra</title>
 </head>
 <body>
+    <div id="messageDiv"> </div>
     <button type="button" onclick="thongbao()">Click me to show news</button>
 </body>
-<script src="news.js"></script>
+<script>
+    function thongbao() {
+        // document.getElementById('messageDiv').innerText = 'Xin chào'
+        // document.write('Xin chào')
+        console.log('Xin chào!');
+    }
+</script>
 </html>
