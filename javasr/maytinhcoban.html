@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+</head>
+
+<body>
+    <form>
+    <input type="text" id="screen" style="width: 100px;">
+    <br>
+    <table>
+        <tr>
+            <td><input type="button" value="1" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="2" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="3" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="+" onclick="inputvalue(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="5" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="6" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="-" onclick="inputvalue(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="8" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="9" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="x" onclick="inputvalue(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="delete()"></td>
+            <td><input type="button" value="0" onclick="inputvalue(this.value)"></td>
+            <td><input type="button" value="=" onclick="kq()"></td>
+            <td><input type="button" value="/" onclick="inputvalue(this.value)"></td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+    let screen=document.getElementById("screen");
+    function inputvalue(value){
+        screen.value += value;
+    }
+    function kq(){
+        let kq = eval(screen.value);
+        screen.value = kq;
+    }
+    function delete(){
+        view.value="";
+    }
+</script>
+</html>
