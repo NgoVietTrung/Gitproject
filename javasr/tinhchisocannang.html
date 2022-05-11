@@ -7,21 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
 </head>
-
+<h2>Tính chỉ số cân nặng</h2>
+<form>
+    <table>
+        <tr>
+            <td>
+    Nhập cân nặng:(kg) <input type="numer" id="weight"></td></tr>
+    <tr>
+        <td>
+    Nhập chiều cao:(m) <input type="numer" id="height"></td></tr>
+    <tr>
+        <td>
+    <input type="button" value="Kiểm tra" onclick="kiemtra()"></td> </tr>
+    <tr>
+        <td id="result"></td>
+    </tr>
+</table>
+</form>
 <body>
     <script>
-        let weight = parseFloat(prompt('Weight:'));
-        let height = parseFloat(prompt('Height:'));
-        bmi = weight / (height ^ 2);
+        function kiemtra() {
+        weight0=document.getElementById('weight').value;
+        height0=document.getElementById('height').value;
+        let result= '';
+        bmi = weight0 / (height0 ^ 2);
         if (bmi < 18.5) {
-            document.write('Underweight')
-        } else if ( bmi >= 18.5 && bmi < 25) {
-            document.write('Normal')
-        } else if ( bmi >= 25 && bmi < 30) {
-            document.write('Overweight')
+             result ='Underweight';
+        } else if (bmi < 25) {
+            result = 'Normal';
+        } else if (bmi < 30) {
+            result = 'Overweight'; 
         } else {
-            document.write('Obese')
+            result = 'Obese';
         }
+        document.getElementById('result').innerHTML= ('' + result)
+    }
     </script>
 </body>
 
