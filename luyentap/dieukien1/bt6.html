@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6</title>
+</head>
+<body>
+    <script>
+        let dtbh=+prompt('Doanh thu bán hàng tháng này ');
+        let thh,lhh;
+        if (dtbh>=10000000 ){
+            thh=3/100;
+            lhh=dtbh*thh;
+            document.write('Lương hoa hồng nhận được ' + lhh);
+        }
+        if (dtbh<10000000 && dtbh > 0 ){
+            thh=1/100;
+            lhh=dtbh*thh;
+            document.write('Lương hoa hồng nhận được ' + lhh);
+        }
+    </script>
+</body>
+</html>

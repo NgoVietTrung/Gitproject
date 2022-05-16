@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<body>
+    <script>
+        let dbkt=+parseFloat(prompt('Điểm bài kiểm tra '));
+        let dtgk=+parseFloat(prompt('Điểm thi giữa kì '));
+        let dtck=+parseFloat(prompt('Điểm thi cuối kì '));
+        let dtb;
+        dtb=(dbkt + (dtgk*2)+(dtck*3))/6;
+        if (dtb>=8 && dtb <=10){
+            document.write('Học sinh giỏi');
+        }
+        if (dtb>=6.5 && dtb < 8){
+            document.write('Học sinh khá');
+        }
+        if (dtb>=5 && dtb <6.5){
+            document.write('Học sinh trung bình');
+        }
+        if (dtb>=0 && dtb <5){
+            document.write('Học sinh yếu');
+        }
+    </script>
+</body>
+</html>
