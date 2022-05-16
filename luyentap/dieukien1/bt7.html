@@ -7,6 +7,16 @@
     <title>Bài tập 7</title>
 </head>
 <body>
-    Không cho thông số sao bọn em làm được
+    <script>
+        let t=+prompt('Số thời gian gọi');
+        let c;
+        if (t > 300) {
+            c=(t/60)*1500;
+            document.write('Cước điện thoại là ' + c + 'VND');
+        } else if (t <=300 && t >0 ) {
+            c=(t/60)*1000 
+            document.write('Cước điện thoại là ' + c + 'VND')
+        }
+    </script>
 </body>
 </html>
