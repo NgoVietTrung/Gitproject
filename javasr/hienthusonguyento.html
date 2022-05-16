@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let i, j, uoc=0, dem=0;
+    let number = +prompt('Nhập số số nguyên tố cần hiển thị :')
+    for (i = 1; i > 0; i++) {
+        if (dem < number) {
+            for (j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    uoc++;
+                }
+            }
+            if (uoc == 2) {
+                document.write(i + '<br>');
+                dem++;
+            }
+            uoc = 0;
+        }
+        else {
+             break;
+            }
+    }
+</script>
+
+</html>
