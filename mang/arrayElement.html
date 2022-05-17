@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+    <input type="text" width="200px" id="textvl">
+    <input type="button" value="Add" id="them" onclick="add_element_to_array()">
+    <input type="button" value="Display" id="hienthi" onclick="display_array()">
+    <div id="result"></div>
+</body>
+<script>
+    let x=0;
+    let array= Array();
+    function add_element_to_array(){
+        array[x]=document.getElementById("textvl").value;
+        alert(`Element : ${array[x]} Added at index ${x}`);
+        x++;
+        document.getElementById("textvl").value="";
+    }
+    function display_array(){
+        let e= "<hr/>";
+        let i;
+        for (i=0;i<array.length;i++){
+            e+=`Element ${i} = ${array[i]}<br>`
+            document.getElementById("result").innerHTML= e;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương</title>
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<tr style="background-color:random ;"></tr>
+
+<body>
+    <script>
+        // let i, j;
+        // document.write(" <table border='1' width='500' padding='1' cellpadding='5' >");
+        // for (i = 1; i <= 10; i++) {
+        //     document.write("<tr>");
+        //     for (j = 2; j <= 9; j++) {
+        //         document.write(`<td style="background-color:${(j%2==0)?"rgb(180, 255, 159)":"rgb(249, 255, 164)"}; 
+        //         color:${(j%2==0)?"rgb(235, 83, 83)":"rgb(118, 74, 241)"}"; >${j}x${i}=${i * j}</td>`);
+        //     }
+        //     document.write("</tr>");
+        // }
+        // document.write("</table>");
+        let i, j;
+        document.write("<table border='1'>")
+        for (i = 0; i < 10; i++) {
+            document.write('<tr>');
+            for (j = 0; j < 10; j++) {
+                document.write(`<td  style="padding:30px;background-color: rgb(${Math.floor(Math.random() * 256)},
+                                                                                ${Math.floor(Math.random() * 256)},
+                                                                                ${Math.floor(Math.random() * 256)}) " ></td>`);
+            }document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+
+</html>

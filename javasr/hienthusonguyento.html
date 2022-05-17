@@ -13,8 +13,7 @@
 <script>
     let i, j, uoc=0, dem=0;
     let number = +prompt('Nhập số số nguyên tố cần hiển thị :')
-    for (i = 1; i > 0; i++) {
-        if (dem < number) {
+    for (i = 1;dem < number; i++) {
             for (j = 1; j <= i; j++) {
                 if (i % j == 0) {
                     uoc++;
@@ -25,10 +24,6 @@
                 dem++;
             }
             uoc = 0;
-        }
-        else {
-             break;
-            }
     }
 </script>
 

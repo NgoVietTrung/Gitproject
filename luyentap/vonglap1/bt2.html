@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập 1</title>
+    <title>Bài tập 2</title>
 </head>
 <body>
     <script>
-        for ( i = 1; i<99; i++){
-            console.log(i);
-        } alert(i);
-        alert('Đã hoàn thành')
+        let temp=+prompt('Nhập nhiệt độ ');
+        if (temp > 100) {
+            document.write('Giảm nhiệt độ');
+        }
+        if (temp < 20){
+            document.write('Tăng nhiệt độ');
+        }
     </script>
 </body>
 </html>
