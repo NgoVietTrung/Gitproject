@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 8</title>
+</head>
+<body>
+    <script>
+        let size=+prompt('size:');
+        let i;
+        let a=[];
+        for(i=0;i<size;i++){
+            a[i]=+prompt('nhap gia tri ');
+        }
+        a.sort(function(a,b){
+            return b-a;
+        });
+        document.write(a);
+        // let size = +prompt('Nhập size');
+        // let a = [];
+        // let i;
+        // for (i = 0; i < size; i++) {
+        //     a[i] = +prompt('gia tri mang');
+        // }
+        // a.sort(function(a,b){
+        //     return b-a;
+        // }
+        // )
+        // document.write(a);
+    </script>
+</body>
+</html>

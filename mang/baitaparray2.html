@@ -15,15 +15,19 @@
             a[i] =Math.floor(Math.random()*(31)+20)
         }
         document.write(a+'<br>');
-        for(i=0;i<size;i++){
-            for(j=i+1;j<size;j++) {
-                if(a[i]>a[j]){
-                    tam=a[i];
-                    a[i]=a[j];
-                    a[j]=tam;
-                }   
-            }
-        }document.write(a);
+        // for(i=0;i<size;i++){
+        //     for(j=i+1;j<size;j++) {
+        //         if(a[i]>a[j]){
+        //             tam=a[i];
+        //             a[i]=a[j];
+        //             a[j]=tam;
+        //         }    
+        //     }
+        // }document.write(a);
+        a.sort(function(a,b) {
+            return a-b;
+        })
+        document.write(a);
     </script>
 </body>
 </html>
