@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <script>
+        function generateArray(size, min, max) {
+            let number = [];
+            let i;
+            for (i = 0; i < size; i++) {
+                number[i] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            return number;
+        }
+        function total(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        function even(array) {
+            let count=0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        function main() {
+            let arrays = generateArray(5, 1, 10);
+            document.write(`Mảng : ${arrays}<br>`);
+            document.write(`Tổng : ${total(arrays)}<br>`)
+            document.write(`Số số chẵn : ${even(arrays)}<br>`)
+        }
+        main();  
+    </script>
+</body>
+
+</html>
