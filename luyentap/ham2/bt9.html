@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 9</title>
+</head>
+<body>
+    <script>
+        function checkinarray(array,value){
+            let count=0;
+            for(let i=0;i<array.length;i++){
+                if (value==array[i]){
+                    count ++;
+                }
+            }if(count>0){
+                console.log(count);
+            }else{
+                console.log(-1);
+            }
+        }
+        let arr=[1,3,4,5,2,0,9,"a"];
+        let val=prompt('nhap ki tu bat ki');
+        checkinarray(arr,val);
+    </script>
+</body>
+</html>

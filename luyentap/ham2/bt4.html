@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4</title>
+</head>
+<body>
+    <script>
+        function check(value){
+            let i;
+            let a='0123456789'
+            let result='';
+            for(i=0;i<a.length;i++){
+                if(a.indexOf(value)!=-1){
+                    result='TRUE'
+                }else{
+                    result="FASLE";
+                }
+            }
+            return result;
+        }
+        let v=+prompt('nhap value');
+        console.log(check(v));
+    </script>
+</body>
+</html>

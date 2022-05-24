@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<body>
+    <script>
+        function min(num1,num2,num3){
+           let a=[num1,num2,num3];
+           let min=num1;
+           let result=0;
+           for(let i=1;i<a.length;i++){
+               if(min<a[i]){
+                   result=min;
+               }else{
+                   min=a[i];
+                   result=min;
+               }
+           }
+           return min;
+        }
+        let n1=+prompt('nhap n1');
+        let n2=+prompt('nhap n2');
+        let n3=+prompt('nhap n3');
+        console.log(min(n1,n2,n3));
+    </script>
+</body>
+</html>
