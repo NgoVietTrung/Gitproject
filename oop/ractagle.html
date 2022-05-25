@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<canvas id="Canvas" width="1350" height="600"></canvas>
+
+<body>
+    <script>
+        function Rectagle(length, width) {
+            this.length = length;
+            this.width = width;
+            this.getArea = function () {
+                return this.length * this.width;
+            };
+            this.getperimeter = function () {
+                return (this.length + this.width) * 2
+            }
+        }
+        function random(){
+            return Math.floor(Math.random()*256);
+        }
+        function randomcolor(){
+            let red=random();
+            let green=random();
+            let blue=random();
+            return `rgb(${red},${green},${blue})`
+        }
+        let rectagle = new Rectagle(200, 100);
+        console.log(`Area: ${rectagle.getArea()}`);
+        console.log(`Perimeter: ${rectagle.getperimeter()}`);
+        function createRectagle(){
+        var ctx =document.getElementById("Canvas").getContext('2d');
+        let color = randomcolor();
+        ctx.fillStyle = color;    
+        ctx.fillRect(575, 100, 200, 100);
+        }
+        createRectagle();
+    </script>
+</body>
+
+</html>
