@@ -9,6 +9,7 @@
 <body>
     <script>
         function Date(day,month,year){
+           
             this.day=day;
             this.month=month;
             this.year=year;
@@ -30,21 +31,29 @@
             this.setYear=function(year){
                  this.year=year;
             };
-            this.setDate=function(){
-                return this.day=0;
-                return this.month=0;
-                return this.year=0;
+            this.setDate=function(day,month,year){
+                this.day=day;
+                this.month=month;
+                this.year=year;
+                return this.setDate;
             };
+            this.getString=function(){
+                return `${this.day}/${this.month}/${this.year}`
+            }
         }
         let date = new Date(2,2,2007);
-        date.setDay(06);
-        date.setMonth(11);
-        date.setYear(2001);
+        // date.setDay(06);
+        // date.setMonth(11);
+        // date.setYear(2001);
+        // let day = date.getDay();
+        // let month = date.getMonth();
+        // let year = date.getYear();
+        date.setDate(12,12,2009);
         let day = date.getDay();
         let month = date.getMonth();
         let year = date.getYear();
-        // date.setDate();
-        console.log(`${day}/${month}/${year}`);
+        // console.log(`${day}/${month}/${year}`);
+        console.log(date.getString());
         
     </script>
 </body>

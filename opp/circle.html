@@ -10,19 +10,22 @@
 <script>
     function Circle(radius,color){
         this.radius=radius;
+        this.getRadius=function(){
+            return this.radius;
+        };
         this.color=color;
         this.getArea=function(){
             return Math.PI * this.radius **2;
         };  
     }
     let circle1= new Circle(4,"red");
-    console.log(`Radius of this circle is ${circle1.radius}`);
+    console.log(`Radius of this circle is ${circle1.getRadius()}`);
     console.log(`This circle is ${circle1.color}`);
-    console.log(`Area of this circle is ${circle1.getArea()}`);
+    console.log(`Area of this circle is ${circle1.getArea().toFixed(2)}`);
     let circle2= new Circle(9,"blue");
-    console.log(`Radius of this circle is ${circle2.radius}`);
+    console.log(`Radius of this circle is ${circle2.getRadius()}`);
     console.log(`This circle is ${circle2.color}`);
-    console.log(`Area of this circle is ${circle2.getArea()}`);
+    console.log(`Area of this circle is ${circle2.getArea().toFixed(2)}`);
 </script>
 </body>
 </html>
