@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Square(long, short) {
+            this.long = long;
+            this.short = short;
+            this.squarearea = function () {
+                // console.log('this is:', this)
+                return this.long * this.short;
+            };
+            this.squareperimeter = function () {
+                return (this.long + this.short) * 2;
+            };
+        }
+        let square1 = new Square(10, 20);
+        console.log("Area: ", square1.squarearea());
+        console.log("Perimeter: ", square1.squareperimeter());
+//         function Circle(radius) {
+//   this.radius = radius;
+//   this.getCircleArea = function () {
+//     console.log('this is:', this)
+//     return Math.PI * this.radius ** 2;
+//   };
+//   this.getCirclePrimeter = function () {
+//     return 2 * Math.PI * this.radius;
+//   };
+// }
+
+// let circle_1 = new Circle(10);
+// console.log("Area: ", circle_1.getCircleArea());
+    </script>
+</body>
+
+</html>
