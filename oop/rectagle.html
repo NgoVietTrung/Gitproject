@@ -21,23 +21,27 @@
                 return (this.length + this.width) * 2
             }
         }
-        function random(){
-            return Math.floor(Math.random()*256);
+        function random() {
+            return Math.floor(Math.random() * 256);
         }
-        function randomcolor(){
-            let red=random();
-            let green=random();
-            let blue=random();
+        function randomcolor() {
+            let red = random();
+            let green = random();
+            let blue = random();
             return `rgb(${red},${green},${blue})`
         }
-        let rectagle = new Rectagle(200, 100);
-        console.log(`Area: ${rectagle.getArea()}`);
-        console.log(`Perimeter: ${rectagle.getperimeter()}`);
-        function createRectagle(){
-        var ctx =document.getElementById("Canvas").getContext('2d');
-        let color = randomcolor();
-        ctx.fillStyle = color;    
-        ctx.fillRect(575, 100, 200, 100);
+        function createRectagle() {
+            let x=Math.floor(Math.random()*(300-100+1)+100);
+            let y=Math.floor(Math.random()*(300-100+1)+100);
+            let a=Math.random()*window.innerWidth;
+            let b=Math.random()*window.innerHeight;
+            let rectagle = new Rectagle(x, y);
+            console.log(`Area: ${rectagle.getArea()}`);
+            console.log(`Perimeter: ${rectagle.getperimeter()}`);
+            var ctx = document.getElementById("Canvas").getContext('2d');
+            let color = randomcolor();
+            ctx.fillStyle = color;
+            ctx.fillRect(a, b, x, y);
         }
         createRectagle();
     </script>
