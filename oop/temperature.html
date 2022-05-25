@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <script>
+        function Temperature(Celsius){
+        this.Celsius=Celsius;
+        this.getF=function(){
+            return ((9/5)*this.Celsius)+32;
+        };
+        this.getK=function(){
+            return this.Celsius-273.15;
+        };
+    }
+    let C= new Temperature(25);
+    console.log(`${C.Celsius}C = ${C.getF()}F`);
+    console.log(`${C.Celsius}C = ${C.getK()}K`);
+    </script>
+</body>
+</html>
