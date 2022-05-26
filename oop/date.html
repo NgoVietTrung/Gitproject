@@ -36,9 +36,9 @@
                 this.year=year;
                 return this.setDate;
             };
-            this.getString=function(){
-                return `${this.day}/${this.month}/${this.year}`
-            }
+            this.greeting= function() {
+                return `${this.day}/${this.month}/${this.year}`;
+            };
         }
         let date = new Date(2,2,2007);
         // date.setDay(06);
@@ -52,7 +52,7 @@
         let month = date.getMonth();
         let year = date.getYear();
         // console.log(`${day}/${month}/${year}`);
-        console.log(date.getString());
+        console.log(date.greeting());
         
     </script>
 </body>
